@@ -1,0 +1,28 @@
+:root {
+    --sims_green: rgb(17, 151, 39);
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3 {
+    color: var(--sims_green);
+}
+
+img {
+    float: right;
+}
+
+ul a:hover {
+    font-size: 1.5em;
+    color: var(--sims_green);
+}
+
+#exp_pax {
+   font-style: italic;
+}
+
+#stf_pax {
+    font-style: italic;
+}
