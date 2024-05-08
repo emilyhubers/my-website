@@ -1,0 +1,27 @@
+/* GENERAL */
+:root {
+    --sims_green: #119727;
+    --sims_blue: #04508d;
+}
+* {
+    background-color: #eeedae;
+    color: var(--sims_blue);
+}
+
+h1, h2, h3 {
+    color: var(--sims_blue);
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* STRANGETOWN */
+article {
+    column-count: 2;
+    column-gap: 40px;
+    column-rule: 3px dashed var(--sims_green)
+}
+
+footer {
+    padding-top: 10%;
+}

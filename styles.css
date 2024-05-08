@@ -1,9 +1,18 @@
+/* GENERAL */
 :root {
-    --sims_green: rgb(17, 151, 39);
+    --sims_green: #119727;
+    --sims_blue: #04508d;
 }
 
+/* BODY */
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#intro {
+    margin-right: 22em;
+    padding: 1em;
+    border: 6px outset var(--sims_blue);
 }
 
 h1, h2, h3 {
@@ -12,6 +21,13 @@ h1, h2, h3 {
 
 img {
     float: right;
+    margin: .5em 2em .5em;
+    border: 7px outset var(--sims_green);
+}
+
+ul {
+    float: left;
+    padding-left: 20%;
 }
 
 ul a:hover {
@@ -19,10 +35,48 @@ ul a:hover {
     color: var(--sims_green);
 }
 
+/* PACKS SECTION */
+#pax {
+    clear: both;
+    border: 5px solid var(--sims_green);
+    background: linear-gradient(45deg, #075207 0%, lightgreen 20%, white 50%, lightgreen 80%, #075207 100%)
+}
+h2 {
+    text-align: center;
+    color: var(--sims_blue);
+    padding: 4px 0px 5px 4px;
+    background-color: lightgreen;
+    border-radius: 60px;
+}
+
+#pax_desc {
+    color: black;
+    padding: 2em 5em 2em;
+    background-color: lightgreen;
+}
+
+.pax_box {
+    background-color: var(--sims_blue);
+    width: 60%;
+    padding: 2px;
+    border: 6px outset var(--sims_blue);
+    border-radius: 60px;
+    color: white;
+}
+
 #exp_pax {
    font-style: italic;
+   text-align: center;
+   color: white;
 }
 
 #stf_pax {
     font-style: italic;
+    text-align: center;
+    color: white;
 }
+
+ol {
+    padding-left: 10%;
+}
+
