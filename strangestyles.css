@@ -12,6 +12,10 @@ h1, h2, h3 {
     color: var(--sims_blue);
 }
 
+h1 {
+    width: 50%;
+}
+
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -19,9 +23,62 @@ body {
 article {
     column-count: 2;
     column-gap: 40px;
-    column-rule: 3px dashed var(--sims_green)
+    column-rule: 3px dashed var(--sims_green);
+    float: left;
 }
 
 footer {
     padding-top: 10%;
+}
+
+/* navigation menu */
+
+#nav_menu ul li a.current {
+  color: var(--sims_green);
+}
+
+#nav_menu {
+  padding-bottom: .2em;
+  width: 90%;
+}
+
+#nav_menu ul {
+  list-style-type: none;
+  padding: .25em;
+  margin: 0;
+  float: left;
+}
+
+#nav_menu ul li {
+  float: left;
+  margin: 2px;
+}
+
+#nav_menu ul li a {
+  text-align: center;
+  display: block;
+  padding: .4em 1em;
+  text-decoration: none;
+  background-color: var(--sims_blue);
+  color: #b2c2ff;
+  font-weight: bold;
+  border-radius: 3em;
+  border-color: #1b0234;
+}
+#nav_menu ul li a.lastitem {
+  border-right: none;
+}
+
+
+#nav_menu ul li a:hover {
+  color: var(--sims_green);
+}
+
+
+
+@media only screen and (max-width: 582px) {
+  #nav_menu ul li {
+      float: none;
+      width: 100%;
+  }
 }

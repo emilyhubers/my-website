@@ -1,38 +1,37 @@
 /* GENERAL */
 :root {
-    --sims_green: #119727;
-    --sims_blue: #04508d;
+    --sims_green: #7dd716;
+    --sims_blue: #3a4991;
 }
 
-/* BODY */
+/* MAIN */
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#intro {
-    margin-right: 22em;
-    padding: 1em;
-    border: 6px outset var(--sims_blue);
 }
 
 h1, h2, h3 {
     color: var(--sims_green);
 }
 
-img {
-    float: right;
-    margin: .5em 2em .5em;
-    border: 7px outset var(--sims_green);
-}
-
-ul {
+h1 {
+    width: 100%;
     float: left;
-    padding-left: 20%;
 }
 
-ul a:hover {
-    font-size: 1.5em;
-    color: var(--sims_green);
+#intro {
+    padding: 2%;
+    border: 6px outset var(--sims_blue);
+    float: left;
+}
+
+img {
+    border: 7px outset var(--sims_green);
+    width: 40%;
+    min-width: 315px;
+}
+
+#intro p {
+    float: right;
 }
 
 /* PACKS SECTION */
@@ -51,7 +50,7 @@ h2 {
 
 #pax_desc {
     color: black;
-    padding: 2em 5em 2em;
+    padding: 6%;
     background-color: lightgreen;
 }
 
@@ -62,6 +61,7 @@ h2 {
     border: 6px outset var(--sims_blue);
     border-radius: 60px;
     color: white;
+    margin-left: 15%;
 }
 
 #exp_pax {
@@ -79,4 +79,67 @@ h2 {
 ol {
     padding-left: 10%;
 }
+
+p {
+    clear: left;
+}
+
+/* navigation menu */
+
+#nav_menu ul li a.current {
+    color: var(--sims_green);
+  }
+
+#nav_menu {
+    padding-bottom: .2em;
+    width: 90%;
+
+}
+
+#nav_menu ul {
+    list-style-type: none;
+    padding: .25em;
+    margin: 0;
+    float: left;
+  }
+
+#nav_menu ul li {
+    float: left;
+    margin: 2px;
+}
+ 
+  #nav_menu ul li a {
+    text-align: center;
+    display: block;
+    padding: .4em 1em;
+    text-decoration: none;
+    background-color: var(--sims_blue);
+    color: #b2c2ff;
+    font-weight: bold;
+    border-radius: 3em;
+    border-color: #1b0234;
+  }
+  #nav_menu ul li a.lastitem {
+    border-right: none;
+  }
+
+  
+  #nav_menu ul li a:hover {
+    color: var(--sims_green);
+  }
+
+@media only screen and (max-width: 650px) {
+    #pax_desc {
+        padding: 3%;
+    }
+}
+
+@media only screen and (max-width: 582px) {
+    #nav_menu ul li {
+        float: none;
+        width: 100%;
+    }
+}
+
+
 
