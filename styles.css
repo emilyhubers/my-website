@@ -15,7 +15,7 @@ h1, h2, h3 {
 
 h1 {
     width: 100%;
-    float: left;
+
 }
 
 #intro {
@@ -28,6 +28,8 @@ img {
     border: 7px outset var(--sims_green);
     width: 40%;
     min-width: 315px;
+    margin: 3%;
+    align-self: center;
 }
 
 #intro p {
@@ -40,7 +42,8 @@ img {
     border: 5px solid var(--sims_green);
     background: linear-gradient(45deg, #075207 0%, lightgreen 20%, white 50%, lightgreen 80%, #075207 100%)
 }
-h2 {
+
+#pax h2 {
     text-align: center;
     color: var(--sims_blue);
     padding: 4px 0px 5px 4px;
@@ -84,6 +87,79 @@ p {
     clear: left;
 }
 
+/* PLEASANTVIEW STYLES */
+
+.pleasant_desc {
+    padding: 5%;
+    background: linear-gradient(45deg, #075207 0%, lightgreen 20%, white 50%, lightgreen 80%, #075207 100%);
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+}
+
+section#pvtitle {
+    padding: 10% 20% 20%;
+    background-image: url(Images/pleasant.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+h1#pvwel {
+    font-size: 200%;
+    text-shadow: #000000 5px 2px 4px;
+}
+
+/* VERONAVILLE STYLES */
+
+#Vv_img {
+    background-color: #075207;
+    grid-area: img;
+}
+
+#Vv_1 {
+    background-color: var(--sims_blue);
+    grid-area: head;
+}
+
+#Vv_2 {
+    background-color:#bb3e28;
+    grid-area: sec1;
+}
+
+#Vv_3 {
+    background-color:#dada76;
+    grid-area: sec3;
+}
+
+#Vv_4 {
+    background-color:#5e631d;
+    grid-area: sec4;
+}
+
+#Vv_5 {
+    background-color:#9b79da;
+    grid-area: sec2;
+}
+
+#Vv_6 {
+    background-color:#5cda7b;
+    grid-area: foot;
+}
+
+main#Verona {
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 16px;
+    grid-template-areas:
+    "img head head"
+    "sec4 sec1 sec1"
+    "sec4 sec2 sec3"
+    "foot foot foot";
+}
+
+
 /* navigation menu */
 
 #nav_menu ul li a.current {
@@ -92,7 +168,6 @@ p {
 
 #nav_menu {
     padding-bottom: .2em;
-    width: 90%;
 
 }
 
@@ -100,12 +175,14 @@ p {
     list-style-type: none;
     padding: .25em;
     margin: 0;
-    float: left;
+    display: flex;
+    flex-direction: row;
   }
 
 #nav_menu ul li {
-    float: left;
+    flex-basis: 25%;
     margin: 2px;
+    justify-content: space-between;
 }
  
   #nav_menu ul li a {
@@ -128,16 +205,38 @@ p {
     color: var(--sims_green);
   }
 
+
+  @media only screen and (max-width: 811px) {
+    main#Verona {
+        display: block;
+    }
+  }
+
+@media only screen and (max-width: 755px) {
+    .pleasant_desc {
+        flex-direction: column;
+    }
+}
+
 @media only screen and (max-width: 650px) {
     #pax_desc {
         padding: 3%;
     }
+
+    div#exp_pax {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div#stf_pax {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 582px) {
-    #nav_menu ul li {
-        float: none;
-        width: 100%;
+    #nav_menu ul {
+        flex-direction: column;
     }
 }
 
