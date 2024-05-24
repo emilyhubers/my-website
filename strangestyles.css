@@ -39,19 +39,21 @@ footer {
 
 #nav_menu {
   padding-bottom: .2em;
-  width: 90%;
+
 }
 
 #nav_menu ul {
   list-style-type: none;
   padding: .25em;
   margin: 0;
-  float: left;
+  display: flex;
+  flex-direction: row;
 }
 
 #nav_menu ul li {
-  float: left;
+  flex-basis: 25%;
   margin: 2px;
+  justify-content: space-between;
 }
 
 #nav_menu ul li a {
@@ -77,8 +79,11 @@ footer {
 
 
 @media only screen and (max-width: 582px) {
-  #nav_menu ul li {
-      float: none;
-      width: 100%;
+  #nav_menu ul {
+      flex-direction: column;
+  }
+
+  article {
+    columns: 1;
   }
 }

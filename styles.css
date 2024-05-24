@@ -2,45 +2,43 @@
 :root {
     --sims_green: #7dd716;
     --sims_blue: #3a4991;
+    --dark_green: #072c07;
 }
 
 /* MAIN */
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--dark_green);
 }
 
-h1, h2, h3 {
+
+h1, h3 {
     color: var(--sims_green);
 }
 
-h1 {
-    width: 100%;
-
-}
 
 #intro {
     padding: 2%;
     border: 6px outset var(--sims_blue);
-    float: left;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
 }
 
 img {
     border: 7px outset var(--sims_green);
-    width: 40%;
+    width: 50%;
     min-width: 315px;
     margin: 3%;
     align-self: center;
 }
 
-#intro p {
-    float: right;
-}
-
 /* PACKS SECTION */
 #pax {
-    clear: both;
+    margin-top: 1em;
+    grid-area: pax;
     border: 5px solid var(--sims_green);
-    background: linear-gradient(45deg, #075207 0%, lightgreen 20%, white 50%, lightgreen 80%, #075207 100%)
+    background: linear-gradient(45deg, #075207 0%, lightgreen 20%, white 50%, lightgreen 80%, #075207 100%);
 }
 
 #pax h2 {
@@ -49,6 +47,7 @@ img {
     padding: 4px 0px 5px 4px;
     background-color: lightgreen;
     border-radius: 60px;
+    
 }
 
 #pax_desc {
@@ -83,15 +82,20 @@ ol {
     padding-left: 10%;
 }
 
-p {
-    clear: left;
-}
-
 /* PLEASANTVIEW STYLES */
 
 .pleasant_desc {
     padding: 5%;
-    background: linear-gradient(45deg, #075207 0%, lightgreen 20%, white 50%, lightgreen 80%, #075207 100%);
+    background: linear-gradient(45deg, #075207 0%, lightgreen 10%, white 50%, lightgreen 90%, #075207 100%);
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+}
+.pleasant_desc1 {
+    padding: 5%;
+    background: linear-gradient(135deg, #075207 0%, lightgreen 10%, white 50%, lightgreen 90%, #075207 100%);
+    margin: 10px 0;
     display: flex;
     flex-direction: row;
     flex-basis: 50%;
@@ -117,32 +121,39 @@ h1#pvwel {
 }
 
 #Vv_1 {
+    padding: 20px;
     background-color: var(--sims_blue);
     grid-area: head;
 }
 
 #Vv_2 {
-    background-color:#bb3e28;
+    padding: 20px;
+    background-color:#833628;
     grid-area: sec1;
 }
 
 #Vv_3 {
-    background-color:#dada76;
+    padding: 20px;
+    background-color:#6b6b34;
     grid-area: sec3;
 }
 
 #Vv_4 {
-    background-color:#5e631d;
+    padding: 20px;
+    background-color:#4d6352;
     grid-area: sec4;
+    
 }
 
 #Vv_5 {
-    background-color:#9b79da;
+    padding: 20px;
+    background-color:#3d2a5f;
     grid-area: sec2;
 }
 
 #Vv_6 {
-    background-color:#5cda7b;
+    padding: 20px;
+    background-color:#48ad61;
     grid-area: foot;
 }
 
@@ -154,11 +165,19 @@ main#Verona {
     grid-gap: 16px;
     grid-template-areas:
     "img head head"
-    "sec4 sec1 sec1"
-    "sec4 sec2 sec3"
+    "sec2 sec1 sec1"
+    "sec2 sec4 sec3"
     "foot foot foot";
 }
 
+#Verona, #Verona h2 {
+    color: #ffffff;
+}
+
+#Verona img {
+    border-color: var(--sims_blue);
+    width: auto;
+}
 
 /* navigation menu */
 
@@ -168,19 +187,18 @@ main#Verona {
 
 #nav_menu {
     padding-bottom: .2em;
-
 }
 
 #nav_menu ul {
     list-style-type: none;
     padding: .25em;
-    margin: 0;
+    margin: 10px;
     display: flex;
     flex-direction: row;
   }
 
 #nav_menu ul li {
-    flex-basis: 25%;
+    flex-basis: 30%;
     margin: 2px;
     justify-content: space-between;
 }
@@ -196,24 +214,30 @@ main#Verona {
     border-radius: 3em;
     border-color: #1b0234;
   }
-  #nav_menu ul li a.lastitem {
-    border-right: none;
-  }
 
-  
   #nav_menu ul li a:hover {
     color: var(--sims_green);
   }
 
+/* MEDIA QUERIES */
 
-  @media only screen and (max-width: 811px) {
+  @media only screen and (max-width: 474px) {
+    #home h1 {
+        flex-direction: column;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
     main#Verona {
         display: block;
     }
   }
 
-@media only screen and (max-width: 755px) {
+@media only screen and (max-width: 873px) {
     .pleasant_desc {
+        flex-direction: column;
+    }
+    .pleasant_desc1 {
         flex-direction: column;
     }
 }
@@ -234,7 +258,7 @@ main#Verona {
     }
 }
 
-@media only screen and (max-width: 582px) {
+@media only screen and (max-width: 600px) {
     #nav_menu ul {
         flex-direction: column;
     }
