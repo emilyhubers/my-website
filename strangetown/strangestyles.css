@@ -2,14 +2,12 @@
 :root {
     --sims_green: #119727;
     --sims_blue: #04508d;
-}
-* {
-    background-color: #eeedae;
-    color: var(--sims_blue);
+    --sandy: #dbd39a;
 }
 
 h1, h2, h3 {
     color: var(--sims_blue);
+
 }
 
 h1 {
@@ -17,18 +15,66 @@ h1 {
 }
 
 body {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--sandy);
 }
+
 /* STRANGETOWN */
-article {
-    column-count: 2;
-    column-gap: 40px;
-    column-rule: 3px dashed var(--sims_green);
-    float: left;
+td.current_file {
+  font-weight: bolder;
+  background-color: #ccbf5a;
+}
+
+td a:hover {
+  font-weight: bolder;
+  background-color: #ccbf5a;
+  padding: .2em .6em;
+}
+
+td a {
+  color: var(--sims_blue);
+}
+
+figure {
+  width: 100%;
+  margin: 0;
+}
+
+figcaption {
+  font-size: 80%;
 }
 
 footer {
     padding-top: 10%;
+}
+
+table {
+  margin: 2em;
+  text-align: center;
+  vertical-align: center; 
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+td img {
+  max-width: 90%;
+  border: 10px #beb885 solid;
+}
+
+table, th, td {
+  border: 1px solid var(--sims_blue);
+  border-collapse: collapse;
+}
+
+th,td {
+  color: var(--sims_blue);
+  padding: .2em .6em;
+}
+
+thead {
+  color: var(--sims_blue);
+  font-size: 175%;
 }
 
 /* navigation menu */
@@ -39,7 +85,7 @@ footer {
 
 #nav_menu {
   padding-bottom: .2em;
-
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #nav_menu ul {
@@ -81,6 +127,10 @@ footer {
 @media only screen and (max-width: 582px) {
   #nav_menu ul {
       flex-direction: column;
+  }
+
+  th, td {
+    display: block;
   }
 
   article {

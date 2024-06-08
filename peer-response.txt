@@ -1,0 +1,11 @@
+1. On smaller screens, some elements of your website become misaligned or overlap.
+I believe this is specifically referring to my home page and my strangetown page. I have 
+converted my homepage to a grid layout to help with alignment issues. Additionally, I 
+changed a lot on my Strangetown page. I have switched from article columns to a table in 
+order to keep all the information easily accessable. I have added media queries to help 
+with misalignment issues as well.
+
+2. Some images lack alternative text, which is crucial for accessibility.
+I have been working on updating all of my images and adding alternative text to all of them. 
+I still have a few images I need to update but they all have alternative text now.
+

@@ -11,23 +11,23 @@ body {
     background-color: var(--dark_green);
 }
 
-
 h1, h3 {
     color: var(--sims_green);
+    font-size: 3vw;
 }
 
-
-#intro {
-    padding: 2%;
-    border: 6px outset var(--sims_blue);
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
+h1 {
+    font-size: 200%;
+    font-family: "Tourney", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: 100;
 }
 
 img {
     border: 7px outset var(--sims_green);
-    width: 50%;
+    width: 90%;
     min-width: 315px;
     margin: 3%;
     align-self: center;
@@ -35,51 +35,94 @@ img {
 
 /* PACKS SECTION */
 #pax {
-    margin-top: 1em;
+    padding: 3%;
     grid-area: pax;
     border: 5px solid var(--sims_green);
     background: linear-gradient(45deg, #075207 0%, lightgreen 20%, white 50%, lightgreen 80%, #075207 100%);
+
 }
 
-#pax h2 {
+#pax h3 {
+
     text-align: center;
     color: var(--sims_blue);
-    padding: 4px 0px 5px 4px;
-    background-color: lightgreen;
-    border-radius: 60px;
-    
-}
-
-#pax_desc {
-    color: black;
-    padding: 6%;
-    background-color: lightgreen;
+    padding: 15px;
+    font-family: "Tourney", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: 125;
 }
 
 .pax_box {
     background-color: var(--sims_blue);
-    width: 60%;
-    padding: 2px;
+    width: 80%;
+    padding: 20px;
     border: 6px outset var(--sims_blue);
     border-radius: 60px;
     color: white;
-    margin-left: 15%;
-}
-
-#exp_pax {
-   font-style: italic;
-   text-align: center;
-   color: white;
-}
-
-#stf_pax {
-    font-style: italic;
-    text-align: center;
-    color: white;
+    margin-left: 10%;
 }
 
 ol {
-    padding-left: 10%;
+    padding-left: 20%;
+}
+
+/* INDEX GRID */
+
+main#home_a {
+    height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 0;
+    grid-template-areas:
+    "hed nav nav"
+    "int img img"
+    "pax exp exp"
+    "pax stf stf";
+}
+
+#a_1 {
+    padding: 3px;
+    background-color: var(--dark_green);
+    grid-area: hed;
+}
+
+#a_2 {
+    padding: 3px;
+    background-color: var(--dark_green);
+    grid-area: nav;
+}
+
+#a_3 {
+    padding: 20px;
+    background-color: lightgreen;
+    grid-area: int;
+}
+
+#a_4 {
+    padding: 2px;
+    background-image: linear-gradient(45deg, #075207 0%, lightgreen 20%, white 50%, lightgreen 80%, #075207 100%);
+    grid-area: img;
+}
+
+#a_5 {
+    padding: 20px;
+    background-color: var(--dark_green);
+    grid-area: pax;
+}
+
+#a_6 {
+    padding: 20px;
+    background-color: var(--dark_green);
+    grid-area: exp;
+}
+
+#a_7 {
+    padding: 20px;
+    background-color: var(--dark_green);
+    grid-area: stf;
 }
 
 /* PLEASANTVIEW STYLES */
@@ -233,28 +276,18 @@ main#Verona {
     }
   }
 
+  @media only screen and (max-width: 971px) {
+    main#home_a {
+        display: block;
+    }
+  }
+
 @media only screen and (max-width: 873px) {
     .pleasant_desc {
         flex-direction: column;
     }
     .pleasant_desc1 {
         flex-direction: column;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    #pax_desc {
-        padding: 3%;
-    }
-
-    div#exp_pax {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    div#stf_pax {
-        flex-direction: column;
-        align-items: center;
     }
 }
 
