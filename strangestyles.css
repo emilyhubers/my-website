@@ -1,8 +1,13 @@
 /* GENERAL */
 :root {
-    --sims_green: #119727;
+    --sims_green: #7dd716;
     --sims_blue: #04508d;
+    --dark_green: #072c07;
     --sandy: #dbd39a;
+}
+
+body {
+  background-color: var(--dark_green);
 }
 
 h1, h2, h3 {
@@ -11,11 +16,33 @@ h1, h2, h3 {
 }
 
 h1 {
-    width: 50%;
+  color: var(--sims_green);
+  font-size: 200%;
+  font-family: "Tourney", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
-body {
-    background-color: var(--sandy);
+header#strange_head {
+  height: 70px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 0;
+  grid-template-areas:
+  "hed nav";
+}
+
+#title {
+  padding: 2px;
+  grid-area: hed;
+}
+
+#strange_nav {
+  padding: 20px;
+  grid-area: nav;
 }
 
 /* STRANGETOWN */
@@ -55,6 +82,7 @@ table {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+  background-color: var(--sandy);
 }
 
 td img {
@@ -113,10 +141,6 @@ thead {
   border-radius: 3em;
   border-color: #1b0234;
 }
-#nav_menu ul li a.lastitem {
-  border-right: none;
-}
-
 
 #nav_menu ul li a:hover {
   color: var(--sims_green);
@@ -124,16 +148,28 @@ thead {
 
 
 
+@media only screen and (max-width: 760px) {
+  header#strange_head {
+      display: block;
+      height: 120px;
+  }
+
+  #strange_nav {
+    padding: 2px;
+  }
+}
+
 @media only screen and (max-width: 582px) {
   #nav_menu ul {
       flex-direction: column;
   }
 
+  header#strange_head {
+    height: 220px;
+}
+
   th, td {
     display: block;
   }
 
-  article {
-    columns: 1;
-  }
 }

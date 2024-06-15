@@ -3,6 +3,8 @@
     --sims_green: #7dd716;
     --sims_blue: #3a4991;
     --dark_green: #072c07;
+    --muted_green: #42573a;
+    --muted_blue: #1a2835;
 }
 
 /* MAIN */
@@ -72,15 +74,17 @@ ol {
 
 main#home_a {
     height: 1000px;
+    text-align: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-gap: 0;
     grid-template-areas:
     "hed nav nav"
     "int img img"
     "pax exp exp"
-    "pax stf stf";
+    "pax stf stf"
+    "ftr cop gpt";
 }
 
 #a_1 {
@@ -114,18 +118,63 @@ main#home_a {
 }
 
 #a_6 {
-    padding: 20px;
+    margin-right: 5%;
+    padding: 10px;
     background-color: var(--dark_green);
     grid-area: exp;
 }
 
 #a_7 {
-    padding: 20px;
+    margin-right: 5%;
+    padding: 10px;
     background-color: var(--dark_green);
     grid-area: stf;
 }
 
+#a_8 {
+    padding: 2px;
+    background-color: var(--sims_green);
+    grid-area: ftr;
+}
+
+#a_9 {
+    padding: 2px;
+    background-color: var(--sims_green);
+    grid-area: cop;
+}
+
+#a_10 {
+    padding: 2px;
+    background-color: var(--sims_green);
+    grid-area: gpt;
+}
+
 /* PLEASANTVIEW STYLES */
+
+header#p_grid {
+    height: 70px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 0;
+    grid-template-areas:
+    "hed nav";
+  }
+
+  #p_title {
+    padding: 2px;
+    grid-area: hed;
+  }
+
+  h1#p_title {
+    font-size: 200%;
+  }
+
+  #p_nav {
+    padding: 20px;
+    grid-area: nav
+  }
 
 .pleasant_desc {
     padding: 5%;
@@ -144,15 +193,17 @@ main#home_a {
     flex-basis: 50%;
 }
 
-section#pvtitle {
-    padding: 10% 20% 20%;
+#pvtitle {
+    margin-top: 3%;
+    padding: 12%;
     background-image: url(Images/pleasant.gif);
     background-repeat: no-repeat;
     background-size: 100%;
+    height: 200px;
 }
 
 h1#pvwel {
-    font-size: 200%;
+    font-size: 250%;
     text-shadow: #000000 5px 2px 4px;
 }
 
@@ -200,13 +251,23 @@ h1#pvwel {
     grid-area: foot;
 }
 
+#vv_title {
+    grid-area: ttl;
+}
+
+#vv_nav {
+    grid-area: vnav;
+}
+
 main#Verona {
     height: 500px;
     display: grid;
+    text-align: center;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-gap: 16px;
     grid-template-areas:
+    "ttl vnav vnav"
     "img head head"
     "sec2 sec1 sec1"
     "sec2 sec4 sec3"
@@ -219,7 +280,12 @@ main#Verona {
 
 #Verona img {
     border-color: var(--sims_blue);
-    width: auto;
+    width: 90%;
+    min-width: 250px;
+}
+
+#Verona h1 {
+    padding-top: 20px;
 }
 
 /* navigation menu */
@@ -264,12 +330,6 @@ main#Verona {
 
 /* MEDIA QUERIES */
 
-  @media only screen and (max-width: 474px) {
-    #home h1 {
-        flex-direction: column;
-    }
-  }
-
   @media only screen and (max-width: 1000px) {
     main#Verona {
         display: block;
@@ -282,7 +342,7 @@ main#Verona {
     }
   }
 
-@media only screen and (max-width: 873px) {
+  @media only screen and (max-width: 873px) {
     .pleasant_desc {
         flex-direction: column;
     }
@@ -291,11 +351,28 @@ main#Verona {
     }
 }
 
+@media only screen and (max-width: 760px) {
+    header#p_grid {
+        display: block;
+        height: 120px;
+    }
+  
+    #p_nav {
+      padding: 2px;
+    }
+  }
+
 @media only screen and (max-width: 600px) {
     #nav_menu ul {
         flex-direction: column;
     }
+    header#p_grid {
+        height: 240px;
+    }
 }
 
-
-
+  @media only screen and (max-width: 474px) {
+    #home h1 {
+        flex-direction: column;
+    }
+  }
